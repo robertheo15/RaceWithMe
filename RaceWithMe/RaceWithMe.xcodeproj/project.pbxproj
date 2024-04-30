@@ -18,6 +18,12 @@
 		0EB8D1E22BDFB35E0055C78A /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB8D1E12BDFB35E0055C78A /* art.scnassets */; };
 		0EB8D1E42BDFB98F0055C78A /* AtributteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8D1E32BDFB98F0055C78A /* AtributteControl.swift */; };
 		0EB8D1E62BDFBAF30055C78A /* CardAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8D1E52BDFBAF30055C78A /* CardAttribute.swift */; };
+		35F103182BE0DADB00B51B18 /* assetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F103172BE0DADB00B51B18 /* assetsModel.swift */; };
+		35F1031E2BE0DB0100B51B18 /* cardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F103192BE0DB0000B51B18 /* cardView.swift */; };
+		35F1031F2BE0DB0100B51B18 /* raceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F1031A2BE0DB0000B51B18 /* raceView.swift */; };
+		35F103202BE0DB0100B51B18 /* garageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F1031B2BE0DB0000B51B18 /* garageView.swift */; };
+		35F103212BE0DB0100B51B18 /* raceViewVersion2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F1031C2BE0DB0000B51B18 /* raceViewVersion2.swift */; };
+		35F103222BE0DB0100B51B18 /* licenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F1031D2BE0DB0000B51B18 /* licenseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +39,12 @@
 		0EB8D1E12BDFB35E0055C78A /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		0EB8D1E32BDFB98F0055C78A /* AtributteControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtributteControl.swift; sourceTree = "<group>"; };
 		0EB8D1E52BDFBAF30055C78A /* CardAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAttribute.swift; sourceTree = "<group>"; };
+		35F103172BE0DADB00B51B18 /* assetsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = assetsModel.swift; sourceTree = "<group>"; };
+		35F103192BE0DB0000B51B18 /* cardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardView.swift; sourceTree = "<group>"; };
+		35F1031A2BE0DB0000B51B18 /* raceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = raceView.swift; sourceTree = "<group>"; };
+		35F1031B2BE0DB0000B51B18 /* garageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = garageView.swift; sourceTree = "<group>"; };
+		35F1031C2BE0DB0000B51B18 /* raceViewVersion2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = raceViewVersion2.swift; sourceTree = "<group>"; };
+		35F1031D2BE0DB0000B51B18 /* licenseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = licenseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +81,11 @@
 				0EB8D1D52BDFB07C0055C78A /* .gitignore */,
 				0EB8D1DA2BDFB1130055C78A /* Model */,
 				0EB8D1C42BDFAFF80055C78A /* RaceWithMeApp.swift */,
+				35F103192BE0DB0000B51B18 /* cardView.swift */,
+				35F1031B2BE0DB0000B51B18 /* garageView.swift */,
+				35F1031D2BE0DB0000B51B18 /* licenseView.swift */,
+				35F1031A2BE0DB0000B51B18 /* raceView.swift */,
+				35F1031C2BE0DB0000B51B18 /* raceViewVersion2.swift */,
 				0EB8D1C62BDFAFF80055C78A /* ContentView.swift */,
 				0EB8D1D72BDFB0F00055C78A /* View */,
 				0EB8D1C82BDFAFF90055C78A /* Assets.xcassets */,
@@ -115,6 +132,7 @@
 		0EB8D1DA2BDFB1130055C78A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				35F103172BE0DADB00B51B18 /* assetsModel.swift */,
 				0EB8D1DB2BDFB11A0055C78A /* Car.swift */,
 			);
 			path = Model;
@@ -192,13 +210,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35F1031E2BE0DB0100B51B18 /* cardView.swift in Sources */,
+				35F103182BE0DADB00B51B18 /* assetsModel.swift in Sources */,
+				35F103202BE0DB0100B51B18 /* garageView.swift in Sources */,
 				0EB8D1E02BDFB3200055C78A /* GameScene.swift in Sources */,
 				0EB8D1C72BDFAFF80055C78A /* ContentView.swift in Sources */,
 				0EB8D1E42BDFB98F0055C78A /* AtributteControl.swift in Sources */,
+				35F103222BE0DB0100B51B18 /* licenseView.swift in Sources */,
+				35F1031F2BE0DB0100B51B18 /* raceView.swift in Sources */,
 				0EB8D1DE2BDFB12F0055C78A /* HomeView.swift in Sources */,
 				0EB8D1C52BDFAFF80055C78A /* RaceWithMeApp.swift in Sources */,
 				0EB8D1DC2BDFB11A0055C78A /* Car.swift in Sources */,
 				0EB8D1E62BDFBAF30055C78A /* CardAttribute.swift in Sources */,
+				35F103212BE0DB0100B51B18 /* raceViewVersion2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
