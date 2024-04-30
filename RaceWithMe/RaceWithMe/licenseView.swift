@@ -11,7 +11,7 @@ import SwiftUI
 struct licenseView: View {
     
     @Binding var scale: Double
-    @Binding var userInput: String
+    @Binding var car: Car
     @Binding var isEditable: Bool
     
     
@@ -22,7 +22,7 @@ struct licenseView: View {
                 .padding()
                 .foregroundColor(.gray)
             if isEditable {
-                TextField("B 1212 YYY", text: $userInput)
+                TextField("B 1212 YYY", text: $car.carNumber)
                     .font(.system(size: 45))
                     .background(Color.gray)
                     .fontWeight(.bold)
@@ -30,7 +30,7 @@ struct licenseView: View {
                     .multilineTextAlignment(.center)
                     .padding()
             } else {
-                Text(userInput)
+                Text(car.carNumber)
                     .font(.system(size: 45))
                     .background(Color.gray)
                     .fontWeight(.bold)

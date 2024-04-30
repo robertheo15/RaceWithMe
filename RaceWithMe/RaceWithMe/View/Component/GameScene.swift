@@ -10,6 +10,7 @@ import SceneKit
 
 struct GameScene: View {
 
+    @Binding var carGame: Car
     @State private var scene: SCNScene = SCNScene(named: "art.scnassets/scene_garage.scn")!
     @State private var garageViewNode: SCNNode?
     @State private var lastWidthRatio: Float = 0
@@ -48,14 +49,22 @@ struct GameScene: View {
 //            cameraNode.eulerAngles = SCNVector3(x: -Float.pi / 6, y: 0, z: 0) // Example rotation (pitch)
         
         // Retrieve car and garage nodes
-//        let car = scene.rootNode.childNode(withName: "car_type2", recursively: true)!
+        let car = scene.rootNode.childNode(withName: "car_type2", recursively: true)!
+        
+        
+        if carGame.carNumber == "" {
+            car.opacity = 0
+        }else{
+            car.opacity = 1
+        }
+        
 //        let ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
         garageViewNode = scene.rootNode.childNode(withName: "garageView", recursively: true)
 //        car.scale = SCNVector3(0.3, 0.3, 0.3)
 //        garageViewNode?.scale = SCNVector3(0.6, 0.6, 0.6)
 
         // Animate car and ship
-        let moveForwardActionCar = SCNAction.moveBy(x: 0, y: -2, z: 0, duration: 2.0)
+//        let moveForwardActionCar = SCNAction.moveBy(x: 0, y: -2, z: 0, duration: 2.0)
 //        let moveForwardActionShip = SCNAction.moveBy(x: -2, y: 0, z: 0, duration: 2.0)
 //        car.runAction(SCNAction.repeatForever(moveForwardActionCar))
 //        ship.runAction(SCNAction.repeatForever(moveForwardActionShip))
@@ -76,14 +85,14 @@ struct GameScene: View {
         // Similar logic to original code to handle tap on a node
     }
 }
-
-struct GameScene_Previews: PreviewProvider {
-    static var previews: some View {
-        GameScene()
-    }
-}
-
-#Preview {
-    GameScene()
-}
+//
+//struct GameScene_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GameScene()
+//    }
+//}
+//
+//#Preview {
+//    GameScene()
+//}
 

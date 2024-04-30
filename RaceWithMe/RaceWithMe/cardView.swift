@@ -18,7 +18,7 @@ struct cardView: View {
                 .fill(Color.gray)
             Text(asset.name)
         }
-        .frame(width: 300, height: 265)
+        .frame(width: 300, height: 240)
         
     }
 }

@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import SceneKit
 
 @main
 struct RaceWithMeApp: App {
     var body: some Scene {
         WindowGroup {
-            GameScene()
+            ContentView()
         }
     }
 }

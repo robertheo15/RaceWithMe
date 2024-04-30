@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct garageView: View {
+    @Binding var carGame: Car
+
     @State private var selectedSide = 1
-    @Binding var userInput: String
+//    @Binding var userInput: String
     @Binding var carSelectedColor: CGColor
     let asset = assetsModel.getAssetsData()
     
@@ -17,15 +19,22 @@ struct garageView: View {
     var body: some View {
         VStack{
             Spacer()
-            Text("yo")
-                .foregroundStyle(Color(carSelectedColor))
+//            VS {
+//                Text("yo")
+//                    .foregroundStyle(Color(carSelectedColor))
+                    .border(Color.black)
+            GameScene(carGame: $carGame).scaledToFit()
+                    .frame(maxWidth: 400)
+//            }
+            
             Spacer()
             
             ZStack {
                 Rectangle()
                     .fill(.thickMaterial)
+//                    .border(Color.black)
                 VStack{
-                    Picker("Choose the SIGs you joined", selection: $selectedSide) {
+                    Picker("Choose picker selection", selection: $selectedSide) {
                         Text("License").tag(0)
                         Text("Body").tag(1)
                         Text("Velg").tag(2)
@@ -36,7 +45,7 @@ struct garageView: View {
                     
                     switch selectedSide {
                     case 0:
-                        licenseView(scale: (.constant(0.9)), userInput: $userInput, isEditable: (.constant(true)))
+                        licenseView(scale: (.constant(0.9)), car: $carGame, isEditable: (.constant(true)))
                         
                     case 1:
                         ScrollView(.horizontal){
@@ -74,7 +83,7 @@ struct garageView: View {
                     
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: 457)
+//            .frame(maxWidth: .infinity, maxHeight: 400)
             
         }
         .ignoresSafeArea()
