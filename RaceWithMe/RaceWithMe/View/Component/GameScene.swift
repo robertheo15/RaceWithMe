@@ -39,25 +39,25 @@ struct GameScene: View {
         // You can add these here or within the SceneKit scene file.
 
         // Retrieve camera node
-            guard let cameraNode = scene.rootNode.childNode(withName: "camera", recursively: true) else {
-                fatalError("Camera node not found")
-            }
+//            guard let cameraNode = scene.rootNode.childNode(withName: "camera", recursively: true) else {
+//                fatalError("Camera node not found")
+//            }
 
             // Adjust camera properties
-            cameraNode.position = SCNVector3(x: 0, y: 5, z: 10) // Example position
+//            cameraNode.position = SCNVector3(x: 0, y: 5, z: 10) // Example position
 //            cameraNode.eulerAngles = SCNVector3(x: -Float.pi / 6, y: 0, z: 0) // Example rotation (pitch)
         
         // Retrieve car and garage nodes
-        let car = scene.rootNode.childNode(withName: "car_type2", recursively: true)!
+//        let car = scene.rootNode.childNode(withName: "car_type2", recursively: true)!
 //        let ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
-        garageViewNode = scene.rootNode.childNode(withName: "env_garage", recursively: true)
-        car.scale = SCNVector3(0.3, 0.3, 0.3)
-        garageViewNode?.scale = SCNVector3(0.6, 0.6, 0.6)
+        garageViewNode = scene.rootNode.childNode(withName: "garageView", recursively: true)
+//        car.scale = SCNVector3(0.3, 0.3, 0.3)
+//        garageViewNode?.scale = SCNVector3(0.6, 0.6, 0.6)
 
         // Animate car and ship
         let moveForwardActionCar = SCNAction.moveBy(x: 0, y: -2, z: 0, duration: 2.0)
 //        let moveForwardActionShip = SCNAction.moveBy(x: -2, y: 0, z: 0, duration: 2.0)
-        car.runAction(SCNAction.repeatForever(moveForwardActionCar))
+//        car.runAction(SCNAction.repeatForever(moveForwardActionCar))
 //        ship.runAction(SCNAction.repeatForever(moveForwardActionShip))
     }
 
