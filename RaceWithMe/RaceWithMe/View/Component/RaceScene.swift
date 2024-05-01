@@ -1,22 +1,20 @@
 //
-//  GameScene.swift
+//  RaceScene.swift
 //  RaceWithMe
 //
-//  Created by robert theo on 29/04/24.
+//  Created by Johan Sianipar on 01/05/24.
 //
 
 import SwiftUI
 import SceneKit
 
-struct GameScene: View {
+struct RaceScene: View {
 
-    @Binding var carGame: Car
-    @State private var scene: SCNScene = SCNScene(named: "art.scnassets/scene_garage.scn")!
+//    @Binding var carGame: Car
+    @State private var scene: SCNScene = SCNScene(named: "art.scnassets/scene_race.scn")!
     @State private var garageViewNode: SCNNode?
     @State private var lastWidthRatio: Float = 0
     @State private var lastHeightRatio: Float = 0
-//    @Binding var selectedColor: CGColor
-    @Binding var selectedCarType: CarType?
 
     var body: some View {
         SceneView(scene: scene)
@@ -28,11 +26,9 @@ struct GameScene: View {
                     updateLastRatios(translation: gesture.predictedEndLocation)
                 }
             )
-            .onChange(of: selectedCarType) { oldCarType, newCarType in
-                            if let newCarType = newCarType {
-                                carGame.type = newCarType // Update carGame type based on selection
-                            }
-                        }
+            .onTapGesture {
+                handleTap()
+            }
             .onAppear {
                 loadScene()
             }
@@ -53,30 +49,17 @@ struct GameScene: View {
 //            cameraNode.eulerAngles = SCNVector3(x: -Float.pi / 6, y: 0, z: 0) // Example rotation (pitch)
         
         // Retrieve car and garage nodes
-        let sedan = scene.rootNode.childNode(withName: CarType.sedan.rawValue, recursively: true)!
-        let cooper = scene.rootNode.childNode(withName: CarType.cooper.rawValue, recursively: true)!
+        let car = scene.rootNode.childNode(withName: "car_type2", recursively: true)!
         
-        if carGame.carNumber == "" {
-            sedan.opacity = 0
-            cooper.opacity = 0
-        } else {
-            switch carGame.type {
-                case .sedan:
-                    sedan.opacity = 1
-                    cooper.opacity = 0
-                case .cooper:
-                    sedan.opacity = 0
-                    cooper.opacity = 1
-                case .supercar:
-                    // Handle supercar opacity or any other cases if needed
-                    sedan.opacity = 0
-                    cooper.opacity = 0
-                }
-        }
-
+        
+//        if carGame.carNumber == "" {
+//            car.opacity = 0
+//        }else{
+//            car.opacity = 1
+//        }
         
 //        let ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
-        garageViewNode = scene.rootNode.childNode(withName: "garageView", recursively: true)
+        garageViewNode = scene.rootNode.childNode(withName: "startView", recursively: true)
 //        car.scale = SCNVector3(0.3, 0.3, 0.3)
 //        garageViewNode?.scale = SCNVector3(0.6, 0.6, 0.6)
 
@@ -98,13 +81,9 @@ struct GameScene: View {
         lastHeightRatio = Float(translation.y.truncatingRemainder(dividingBy: CGFloat(Float(UIScreen.main.bounds.height))))
     }
 
-//    func updateCarColor() {
-//            let colorMaterial = SCNMaterial()
-//            colorMaterial.diffuse.contents = UIColor(cgColor: selectedColor)
-//
-//            sedanNode?.geometry?.materials = [colorMaterial]
-//            cooperNode?.geometry?.materials = [colorMaterial]
-//        }
+    func handleTap() {
+        // Similar logic to original code to handle tap on a node
+    }
 }
 //
 //struct GameScene_Previews: PreviewProvider {

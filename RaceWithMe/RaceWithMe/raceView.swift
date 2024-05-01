@@ -14,6 +14,10 @@ struct raceView: View {
     var body: some View {
         NavigationView {
             VStack{
+                ZStack {
+                    RaceScene().scaledToFill().ignoresSafeArea()
+//                            .frame(maxWidth: 400)
+                }
                 Spacer()
                 Form {
                     Section{
@@ -67,4 +71,3 @@ struct raceView: View {
 #Preview {
     raceView()
 }
-
