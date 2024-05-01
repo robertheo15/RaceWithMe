@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct ContentView: View {
     
     @State var car: Car = Car(id: 2, type: CarType.cooper, carNumber: "", name: "", attribute: CarAttribute(velg: "abc"), speedBase: 10, finalSpeed: 100)
+    
+    let clickSound = AVPlayer(url:  Bundle.main.url(forResource: "sound_button_click1", withExtension: "mp3")!)
     
     @State private var scale = 1.01
 //    @State var userInput = ""
@@ -65,6 +68,10 @@ struct ContentView: View {
                 )
                 
                 .padding(.bottom, 40)
+                .simultaneousGesture(TapGesture().onEnded {
+                    clickSound.volume = 2
+                    clickSound.play()
+                            })
             }
             .background(
                 GameScene(carGame: $car).scaledToFill()

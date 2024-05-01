@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct GarageView: View {
     @Binding var carGame: Car
     @Environment(\.presentationMode) var presentationMode2
     @State private var selectedSide = 1
     let assets = Car.getAssetsData()
+    
+    let clickSound = AVPlayer(url:  Bundle.main.url(forResource: "sound_button_click2", withExtension: "mp3")!)
     
     
     var body: some View {
@@ -76,6 +79,10 @@ struct GarageView: View {
                             .padding(.horizontal)
                     )
                     .padding(.bottom, 40)
+                    .simultaneousGesture(TapGesture().onEnded {
+                        clickSound.volume = 2
+                        clickSound.play()
+                                })
                 }
             }
         }

@@ -11,6 +11,9 @@
 		048E5A732BE2BE4A00C4FCCC /* homeScreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 048E5A722BE2BE4A00C4FCCC /* homeScreen.mp4 */; };
 		048E5A752BE2BE7000C4FCCC /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E5A742BE2BE7000C4FCCC /* HomeScreenView.swift */; };
 		048E5A772BE2D52D00C4FCCC /* background_music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048E5A762BE2D52D00C4FCCC /* background_music1.mp3 */; };
+		048E5A792BE2D99900C4FCCC /* sound_car_engine1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048E5A782BE2D99900C4FCCC /* sound_car_engine1.mp3 */; };
+		048E5A7E2BE2DDFC00C4FCCC /* sound_button_click1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048E5A7C2BE2DDFC00C4FCCC /* sound_button_click1.mp3 */; };
+		048E5A7F2BE2DDFC00C4FCCC /* sound_button_click2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048E5A7D2BE2DDFC00C4FCCC /* sound_button_click2.mp3 */; };
 		0EB8D1C52BDFAFF80055C78A /* RaceWithMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8D1C42BDFAFF80055C78A /* RaceWithMeApp.swift */; };
 		0EB8D1C72BDFAFF80055C78A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8D1C62BDFAFF80055C78A /* ContentView.swift */; };
 		0EB8D1C92BDFAFF90055C78A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB8D1C82BDFAFF90055C78A /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 		048E5A722BE2BE4A00C4FCCC /* homeScreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = homeScreen.mp4; sourceTree = "<group>"; };
 		048E5A742BE2BE7000C4FCCC /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		048E5A762BE2D52D00C4FCCC /* background_music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background_music1.mp3; sourceTree = "<group>"; };
+		048E5A782BE2D99900C4FCCC /* sound_car_engine1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_car_engine1.mp3; sourceTree = "<group>"; };
+		048E5A7C2BE2DDFC00C4FCCC /* sound_button_click1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_button_click1.mp3; sourceTree = "<group>"; };
+		048E5A7D2BE2DDFC00C4FCCC /* sound_button_click2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_button_click2.mp3; sourceTree = "<group>"; };
 		0EB8D1C12BDFAFF80055C78A /* RaceWithMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaceWithMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB8D1C42BDFAFF80055C78A /* RaceWithMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceWithMeApp.swift; sourceTree = "<group>"; };
 		0EB8D1C62BDFAFF80055C78A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +91,9 @@
 		0EB8D1C32BDFAFF80055C78A /* RaceWithMe */ = {
 			isa = PBXGroup;
 			children = (
+				048E5A7C2BE2DDFC00C4FCCC /* sound_button_click1.mp3 */,
+				048E5A7D2BE2DDFC00C4FCCC /* sound_button_click2.mp3 */,
+				048E5A782BE2D99900C4FCCC /* sound_car_engine1.mp3 */,
 				048E5A762BE2D52D00C4FCCC /* background_music1.mp3 */,
 				048E5A722BE2BE4A00C4FCCC /* homeScreen.mp4 */,
 				0EB8D1E12BDFB35E0055C78A /* art.scnassets */,
@@ -208,12 +217,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048E5A7F2BE2DDFC00C4FCCC /* sound_button_click2.mp3 in Resources */,
 				0EB8D1CC2BDFAFF90055C78A /* Preview Assets.xcassets in Resources */,
+				048E5A792BE2D99900C4FCCC /* sound_car_engine1.mp3 in Resources */,
 				0EB8D1E22BDFB35E0055C78A /* art.scnassets in Resources */,
 				048E5A732BE2BE4A00C4FCCC /* homeScreen.mp4 in Resources */,
 				0EB8D1D62BDFB07C0055C78A /* .gitignore in Resources */,
 				048E5A772BE2D52D00C4FCCC /* background_music1.mp3 in Resources */,
 				0EB8D1C92BDFAFF90055C78A /* Assets.xcassets in Resources */,
+				048E5A7E2BE2DDFC00C4FCCC /* sound_button_click1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

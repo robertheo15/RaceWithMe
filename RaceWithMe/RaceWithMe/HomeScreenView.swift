@@ -42,8 +42,8 @@ struct HomeScreenView: View {
 //    @State var path = Bundle.main.path(forResource: "homeScreen", ofType: "mp4")
 //    var player =  AVPlayer(url: NSURL(fileURLWithPath: path!) as URL)
     let avPlayer = AVPlayer(url:  Bundle.main.url(forResource: "homeScreen", withExtension: "mp4")!)
-    
-
+    let carEngine = AVPlayer(url:  Bundle.main.url(forResource: "sound_car_engine1", withExtension: "mp3")!)
+    let clickSound = AVPlayer(url:  Bundle.main.url(forResource: "sound_button_click1", withExtension: "mp3")!)
     
     var body: some View {
         NavigationView {
@@ -74,11 +74,18 @@ struct HomeScreenView: View {
                                 .opacity(0.9)
                                 .padding(.horizontal)
                         ).padding(.bottom, 120)
+                            .simultaneousGesture(TapGesture().onEnded {
+                                clickSound.volume = 2
+                                clickSound.play() // <-- for testing
+                                            // SoundManager.instance.playSound(sound: .impact)
+                                        })
                     }
-                   
+
                 }
             }
-        }
+        }.onAppear(perform: {
+            carEngine.play()
+        })
     }
 }
 
