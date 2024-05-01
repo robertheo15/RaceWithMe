@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SceneKit
 
 struct Movement {
     var x: CGFloat = 0
@@ -18,19 +19,26 @@ struct RaceViewVersion2: View {
     @State private var confettiMovements: [Movement] = []
     @State private var isAnimating = false
     @Environment(\.presentationMode) var presentationMode
+    @State var raceScene: SCNScene? = .init(named: "art.scnassets/race2.scn")
+    @Binding var carGame: Car
 
     var body: some View {
         VStack {
             ZStack {
+                CustomRaceSceneView(raceScene: $raceScene)
+                    .frame(height: 500)
+//                    .border(Color.black)
                 ForEach(confettiMovements.indices, id: \.self) { index in
                     Confetti(movement: $confettiMovements[index])
+                    
+                    
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: 550)
-            Spacer()
+//            .frame(maxWidth: .infinity, maxHeight: 500)
+
             NavigationView {
                 VStack{
-                    Spacer()
+//                    Spacer()
                     Form {
                         Section{
                             HStack{
@@ -72,17 +80,32 @@ struct RaceViewVersion2: View {
                         }
                         
                     }
-                    .frame(maxWidth: .infinity, maxHeight: 252)
+//                    .border(Color.black)
+                    .frame(maxWidth: .infinity, maxHeight: 400)
                 }
-                .tint(Color.orange)
             }
-            .frame(maxWidth: .infinity, maxHeight: 300)
+            .frame(maxWidth: .infinity, maxHeight: 400)
+//            .border(Color.red)
             
         }
+        .ignoresSafeArea()
         .onAppear {
+//            loadScene()
             startAnimation()
         }
     }
+    
+//    func loadScene() {
+
+            // Load race.scn or race2.scn based on conditions
+//        if carGame.type == .sedan /*&& carGame.attribute.velg == ""*/ {
+//                raceScene = SCNScene(named: "art.scnassets/raceSedanWin.scn")
+//            } else if carGame.type == .sedan && (carGame.attribute.velg == "" || carGame.attribute.velg == "") {
+//                raceScene = SCNScene(named: "art.scnassets/race2.scn")
+//            } else {
+//                raceScene = SCNScene(named: "art.scnassets/race.scn")
+//            }
+//        }
 
     func startAnimation() {
         isAnimating = true
@@ -111,7 +134,7 @@ struct Confetti: View {
     @Binding var movement: Movement
 
     var body: some View {
-        Text("💵")
+        Text("🗿")
             .frame(width: 70)
             .offset(x: movement.x, y: movement.y)
             .scaleEffect(movement.z)

@@ -60,10 +60,12 @@ struct RaceView: View {
                     }
                     
                 }
-                .frame(maxWidth: .infinity, maxHeight: 252)
+                .frame(maxWidth: .infinity, maxHeight: 400)
             }
             .tint(Color.orange)
+            .ignoresSafeArea()
         }
+        .ignoresSafeArea()
         
     }
 }

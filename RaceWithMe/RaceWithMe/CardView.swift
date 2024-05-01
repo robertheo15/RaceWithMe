@@ -17,22 +17,24 @@ struct CardView: View {
     var body: some View {
         
         ZStack{
+            RoundedRectangle(cornerRadius: 30)
+                .fill(.gray)
             Image(asset.name)
                 .resizable()
+                .scaledToFit()
                 .frame(width: 300, height: 240)
                 .cornerRadius(30)
-                .onTapGesture {
-                    DispatchQueue.global().async {
-                        if let newType = CarType(rawValue: asset.type.rawValue) {
-                            DispatchQueue.main.async {
-                                carGame.type = newType
-                            }
-                        }
-                    }
-                }
-
         }
         .frame(width: 300, height: 240)
+        .onTapGesture {
+            DispatchQueue.global().async {
+                if let newType = CarType(rawValue: asset.type.rawValue) {
+                    DispatchQueue.main.async {
+                        carGame.type = newType
+                    }
+                }
+            }
+        }
         
     }
 }
