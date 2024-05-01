@@ -28,9 +28,8 @@ struct Car: Identifiable {
     }
     static func getAssetsData() -> [Car] {
         return [
-            Car(id: 1, type: CarType.sedan, carNumber: "", name: "sedan", attribute: CarAttribute(velg: "sedan_velg"), speedBase: 10, finalSpeed: 200),
-            Car(id: 2, type: CarType.cooper, carNumber: "", name: "cooper", attribute: CarAttribute(velg: "cooper_velg"), speedBase: 10, finalSpeed: 100)
-            
+            Car(id: 1, type: CarType.cooper, carNumber: "", name: "car_type2", attribute: CarAttribute(velg: "cooper_velg"), speedBase: 10, finalSpeed: 100),
+            Car(id: 2, type: CarType.sedan, carNumber: "", name: "car_type1", attribute: CarAttribute(velg: "sedan_velg"), speedBase: 10, finalSpeed: 200)
         ]
     }
     

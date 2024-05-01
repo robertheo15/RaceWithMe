@@ -30,19 +30,13 @@ struct GameScene: View {
                     updateLastRatios(translation: gesture.predictedEndLocation)
                 }
             )
-
-//            .onChange(of: selectedCarType) { oldCarType, newCarType in
-//                            if let newCarType = newCarType {
-//                                carGame.type = newCarType // Update carGame type based on selection
-//                            }
-//                        }
-
-            
-
             .onAppear {
                 loadScene()
             }
             .ignoresSafeArea(.all)
+            .onChange(of: carGame.type) {
+                updateCarOpacity()
+            }
     }
 
     func loadScene() {
@@ -61,37 +55,36 @@ struct GameScene: View {
         // Retrieve car and garage nodes
         let sedan = scene.rootNode.childNode(withName: CarType.sedan.rawValue, recursively: true)!
         let cooper = scene.rootNode.childNode(withName: CarType.cooper.rawValue, recursively: true)!
-        
         if carGame.carNumber == "" {
             sedan.opacity = 0
             cooper.opacity = 0
         } else {
-            switch carGame.type {
-                case .sedan:
-                    sedan.opacity = 1
-                    cooper.opacity = 0
-                case .cooper:
-                    sedan.opacity = 0
-                    cooper.opacity = 1
-                case .supercar:
-                    // Handle supercar opacity or any other cases if needed
-                    sedan.opacity = 0
-                    cooper.opacity = 0
-                }
+            DispatchQueue.main.async {
+                updateCarOpacity()
+            }
         }
-
         
-//        let ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
+    
         garageViewNode = scene.rootNode.childNode(withName: "garageView", recursively: true)
-//        car.scale = SCNVector3(0.3, 0.3, 0.3)
-//        garageViewNode?.scale = SCNVector3(0.6, 0.6, 0.6)
-
-        // Animate car and ship
-//        let moveForwardActionCar = SCNAction.moveBy(x: 0, y: -2, z: 0, duration: 2.0)
-//        let moveForwardActionShip = SCNAction.moveBy(x: -2, y: 0, z: 0, duration: 2.0)
-//        car.runAction(SCNAction.repeatForever(moveForwardActionCar))
-//        ship.runAction(SCNAction.repeatForever(moveForwardActionShip))
     }
+    
+    func updateCarOpacity() {
+        let sedan = scene.rootNode.childNode(withName: CarType.sedan.rawValue, recursively: true)!
+        let cooper = scene.rootNode.childNode(withName: CarType.cooper.rawValue, recursively: true)!
+
+        switch carGame.type {
+            case .sedan:
+                sedan.opacity = 1
+                cooper.opacity = 0
+            case .cooper:
+                sedan.opacity = 0
+                cooper.opacity = 1
+            case .supercar:
+                sedan.opacity = 0
+                cooper.opacity = 0
+        }
+    }
+
 
     func updateRotation(translation: CGSize) {
         let widthRatio = Float(translation.width) / Float(UIScreen.main.bounds.width) + lastWidthRatio

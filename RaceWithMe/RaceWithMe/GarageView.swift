@@ -11,7 +11,7 @@ struct GarageView: View {
     @Binding var carGame: Car
     @Environment(\.presentationMode) var presentationMode2
     @State private var selectedSide = 1
-    let asset = Car.getAssetsData()
+    let assets = Car.getAssetsData()
     
     
     var body: some View {
@@ -45,8 +45,8 @@ struct GarageView: View {
                     case 1:
                         ScrollView(.horizontal){
                             LazyHStack {
-                                ForEach(asset) { asset in
-                                    CardView(asset: asset)
+                                ForEach(assets) { asset in
+                                    CardView(carGame: $carGame, asset: asset)
                                 }
                                 
                             }

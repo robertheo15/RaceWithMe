@@ -51,10 +51,8 @@ struct ContentView: View {
                         .navigationTitle("Garage")
                         .navigationBarTitleDisplayMode(.inline)
                         .labelsHidden()
-//                        .toolbarBackground(.black, for: .navigationBar)
                 } label: {
                     Text("Start")
-//                        .foregroundStyle(.red)
                         .bold()
                         .font(.title2)
                         .frame(maxWidth: .infinity, maxHeight: 56)
