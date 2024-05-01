@@ -16,7 +16,9 @@ struct GameScene: View {
     @State private var lastWidthRatio: Float = 0
     @State private var lastHeightRatio: Float = 0
 //    @Binding var selectedColor: CGColor
-    @Binding var selectedCarType: CarType?
+
+//    @Binding var selectedCarType: CarType?
+
 
     var body: some View {
         SceneView(scene: scene)
@@ -28,11 +30,15 @@ struct GameScene: View {
                     updateLastRatios(translation: gesture.predictedEndLocation)
                 }
             )
-            .onChange(of: selectedCarType) { oldCarType, newCarType in
-                            if let newCarType = newCarType {
-                                carGame.type = newCarType // Update carGame type based on selection
-                            }
-                        }
+
+//            .onChange(of: selectedCarType) { oldCarType, newCarType in
+//                            if let newCarType = newCarType {
+//                                carGame.type = newCarType // Update carGame type based on selection
+//                            }
+//                        }
+
+            
+
             .onAppear {
                 loadScene()
             }

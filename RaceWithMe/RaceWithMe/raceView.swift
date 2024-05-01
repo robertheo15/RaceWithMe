@@ -15,7 +15,7 @@ struct raceView: View {
         NavigationView {
             VStack{
                 ZStack {
-                    RaceScene().scaledToFill().ignoresSafeArea()
+//                    RaceScene().scaledToFill().ignoresSafeArea()
 //                            .frame(maxWidth: 400)
                 }
                 Spacer()

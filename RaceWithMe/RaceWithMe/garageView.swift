@@ -12,9 +12,7 @@ struct garageView: View {
     @Environment(\.presentationMode) var presentationMode2
     @State private var selectedSide = 1
 //    @Binding var userInput: String
-    @Binding var carSelectedColor: CGColor
     let asset = Car.getAssetsData()
-    @State private var selectedCarType: CarType? = nil
     
     
     var body: some View {
@@ -24,7 +22,7 @@ struct garageView: View {
 //                Text("yo")
 //                    .foregroundStyle(Color(carSelectedColor))
                     .border(Color.black)
-            GameScene(carGame: $carGame, selectedColor: $carSelectedColor)
+            GameScene(carGame: $carGame)
                 .scaledToFit()
                 .frame(maxWidth: 400)
 //            }

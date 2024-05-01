@@ -37,7 +37,7 @@ struct ContentView: View {
                 Spacer()
                 
                 NavigationLink {
-                    garageView(carGame: $car,  carSelectedColor: $carSelectedColor)
+                    garageView(carGame: $car)
                         .navigationBarBackButtonHidden(true)
                         .navigationBarItems(trailing:
                                                 ColorPicker("Select Color", selection: $carSelectedColor)
@@ -69,7 +69,7 @@ struct ContentView: View {
                 .padding(.bottom, 40)
             }
             .background(
-                GameScene(carGame: $car, selectedColor: $carSelectedColor).scaledToFill()
+                GameScene(carGame: $car).scaledToFill()
 
             )
             .padding(.top, 40)
