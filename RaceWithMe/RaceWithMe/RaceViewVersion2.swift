@@ -19,7 +19,7 @@ struct RaceViewVersion2: View {
     @State private var confettiMovements: [Movement] = []
     @State private var isAnimating = false
     @Environment(\.presentationMode) var presentationMode
-    @State var raceScene: SCNScene? = .init(named: "art.scnassets/race2.scn")
+    @State var raceScene: SCNScene? = .init(named: "art.scnassets/race.scn")
     @Binding var carGame: Car
 
     var body: some View {
@@ -34,6 +34,7 @@ struct RaceViewVersion2: View {
                     
                 }
             }
+            .padding(.bottom, -10)
 //            .frame(maxWidth: .infinity, maxHeight: 500)
 
             NavigationView {

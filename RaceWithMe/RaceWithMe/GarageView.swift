@@ -21,6 +21,7 @@ struct GarageView: View {
             GameScene(carGame: $carGame)
                 .scaledToFit()
                 .frame(maxWidth: 400)
+                .padding(.bottom, -10)
             Spacer()
             ZStack {
                 Rectangle()
