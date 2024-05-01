@@ -7,32 +7,24 @@
 
 import SwiftUI
 
-struct garageView: View {
+struct GarageView: View {
     @Binding var carGame: Car
     @Environment(\.presentationMode) var presentationMode2
     @State private var selectedSide = 1
-//    @Binding var userInput: String
     let asset = Car.getAssetsData()
     
     
     var body: some View {
         VStack{
             Spacer()
-//            VS {
-//                Text("yo")
-//                    .foregroundStyle(Color(carSelectedColor))
-                    .border(Color.black)
+                .border(Color.black)
             GameScene(carGame: $carGame)
                 .scaledToFit()
                 .frame(maxWidth: 400)
-//            }
-            
             Spacer()
-            
             ZStack {
                 Rectangle()
                     .fill(.thickMaterial)
-//                    .border(Color.black)
                 VStack{
                     Picker("Choose picker selection", selection: $selectedSide) {
                         Text("License").tag(0)
@@ -45,7 +37,7 @@ struct garageView: View {
                     
                     switch selectedSide {
                     case 0:
-                        licenseView(scale: (.constant(0.9)), car: $carGame, isEditable: (.constant(false)))
+                        LicenseView(scale: (.constant(0.9)), car: $carGame, isEditable: (.constant(false)))
                             .onTapGesture {
                                 presentationMode2.wrappedValue.dismiss()
                             }
@@ -54,7 +46,7 @@ struct garageView: View {
                         ScrollView(.horizontal){
                             LazyHStack {
                                 ForEach(asset) { asset in
-                                    cardView(asset: asset)
+                                    CardView(asset: asset)
                                 }
                                 
                             }
@@ -69,11 +61,10 @@ struct garageView: View {
                     Spacer()
                     
                     NavigationLink {
-                        raceView()
+                        RaceView()
                             .navigationBarBackButtonHidden(true)
                     } label: {
                         Text("Race")
-//                            .foregroundStyle(.blue)
                             .bold()
                             .padding()
                             .frame(maxWidth: .infinity, maxHeight: 56)
@@ -84,11 +75,8 @@ struct garageView: View {
                             .padding(.horizontal)
                     )
                     .padding(.bottom, 40)
-                    
                 }
             }
-//            .frame(maxWidth: .infinity, maxHeight: 400)
-            
         }
         .ignoresSafeArea()
     }

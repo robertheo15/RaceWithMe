@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct cardView: View {
+struct CardView: View {
     
     var asset: Car
     

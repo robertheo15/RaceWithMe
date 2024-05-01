@@ -22,7 +22,7 @@ struct ContentView: View {
             VStack {
                 
                 Spacer()
-                licenseView(scale: $scale, car: $car, isEditable: $isEditable)
+                LicenseView(scale: $scale, car: $car, isEditable: $isEditable)
                     .onTapGesture {
                         withAnimation {
                             scale = scale + 0.05
@@ -37,7 +37,7 @@ struct ContentView: View {
                 Spacer()
                 
                 NavigationLink {
-                    garageView(carGame: $car)
+                    GarageView(carGame: $car)
                         .navigationBarBackButtonHidden(true)
                         .navigationBarItems(trailing:
                                                 ColorPicker("Select Color", selection: $carSelectedColor)
@@ -45,7 +45,7 @@ struct ContentView: View {
                                             
                         )
                         .navigationBarItems(leading:
-                                                licenseView(scale: (.constant(0.2)), car:$car, isEditable: (.constant(false)))
+                                                LicenseView(scale: (.constant(0.2)), car:$car, isEditable: (.constant(false)))
                         .frame(width: 60, height: 35)
                         )
                         .navigationTitle("Garage")

@@ -36,6 +36,8 @@ struct RaceScene: View {
     }
 
     func loadScene() {
+        garageViewNode = scene.rootNode.childNode(withName: "startView", recursively: true)
+
         // Add camera and lights (similar to original code)
         // You can add these here or within the SceneKit scene file.
 

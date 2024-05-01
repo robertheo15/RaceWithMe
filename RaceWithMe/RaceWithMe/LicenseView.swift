@@ -8,12 +8,11 @@
 import Foundation
 import SwiftUI
 
-struct licenseView: View {
+struct LicenseView: View {
     
     @Binding var scale: Double
     @Binding var car: Car
     @Binding var isEditable: Bool
-    
     
     var body: some View {
         ZStack {
@@ -36,8 +35,7 @@ struct licenseView: View {
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                     .padding()
-            }
-            
+        }
         }
         .frame(width: 295, height: 150)
         .scaleEffect(scale)

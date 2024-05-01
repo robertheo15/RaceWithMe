@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct raceView: View {
+struct RaceView: View {
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -69,5 +69,5 @@ struct raceView: View {
 }
 
 #Preview {
-    raceView()
+    RaceView()
 }

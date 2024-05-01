@@ -14,7 +14,7 @@ struct Movement {
     var opacity: Double = 0
 }
 
-struct raceViewVersion2: View {
+struct RaceViewVersion2: View {
     @State private var confettiMovements: [Movement] = []
     @State private var isAnimating = false
     @Environment(\.presentationMode) var presentationMode
@@ -130,11 +130,5 @@ struct Confetti: View {
                     }
                 }
             }
-    }
-}
-
-struct FancyButtonViewModel_Previews: PreviewProvider {
-    static var previews: some View {
-        raceViewVersion2()
     }
 }
