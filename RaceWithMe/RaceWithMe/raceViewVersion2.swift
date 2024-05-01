@@ -66,7 +66,7 @@ struct raceViewVersion2: View {
                                 Text("Play Again")
                                     .frame(maxWidth: .infinity)
                             }
-                            .foregroundColor(.blue)
+//                            .foregroundColor(.blue)
                             .bold()
 
                         }

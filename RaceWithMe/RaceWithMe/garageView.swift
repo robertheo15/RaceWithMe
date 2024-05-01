@@ -9,11 +9,12 @@ import SwiftUI
 
 struct garageView: View {
     @Binding var carGame: Car
-
+    @Environment(\.presentationMode) var presentationMode2
     @State private var selectedSide = 1
 //    @Binding var userInput: String
     @Binding var carSelectedColor: CGColor
-    let asset = assetsModel.getAssetsData()
+    let asset = Car.getAssetsData()
+    @State private var selectedCarType: CarType? = nil
     
     
     var body: some View {
@@ -23,8 +24,9 @@ struct garageView: View {
 //                Text("yo")
 //                    .foregroundStyle(Color(carSelectedColor))
                     .border(Color.black)
-            GameScene(carGame: $carGame).scaledToFit()
-                    .frame(maxWidth: 400)
+            GameScene(carGame: $carGame, selectedColor: $carSelectedColor)
+                .scaledToFit()
+                .frame(maxWidth: 400)
 //            }
             
             Spacer()
@@ -45,7 +47,10 @@ struct garageView: View {
                     
                     switch selectedSide {
                     case 0:
-                        licenseView(scale: (.constant(0.9)), car: $carGame, isEditable: (.constant(true)))
+                        licenseView(scale: (.constant(0.9)), car: $carGame, isEditable: (.constant(false)))
+                            .onTapGesture {
+                                presentationMode2.wrappedValue.dismiss()
+                            }
                         
                     case 1:
                         ScrollView(.horizontal){
@@ -53,6 +58,7 @@ struct garageView: View {
                                 ForEach(asset) { asset in
                                     cardView(asset: asset)
                                 }
+                                
                             }
                         }
                         .padding(.horizontal)
@@ -69,7 +75,7 @@ struct garageView: View {
                             .navigationBarBackButtonHidden(true)
                     } label: {
                         Text("Race")
-                            .foregroundStyle(.blue)
+//                            .foregroundStyle(.blue)
                             .bold()
                             .padding()
                             .frame(maxWidth: .infinity, maxHeight: 56)

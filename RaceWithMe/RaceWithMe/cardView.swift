@@ -10,7 +10,7 @@ import SwiftUI
 
 struct cardView: View {
     
-    var asset: assetsModel
+    var asset: Car
     
     var body: some View {
         ZStack{

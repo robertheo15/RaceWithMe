@@ -15,6 +15,8 @@ struct GameScene: View {
     @State private var garageViewNode: SCNNode?
     @State private var lastWidthRatio: Float = 0
     @State private var lastHeightRatio: Float = 0
+    @Binding var selectedColor: CGColor
+    @Binding var selectedCarType: CarType?
 
     var body: some View {
         SceneView(scene: scene)
@@ -26,9 +28,11 @@ struct GameScene: View {
                     updateLastRatios(translation: gesture.predictedEndLocation)
                 }
             )
-            .onTapGesture {
-                handleTap()
-            }
+            .onChange(of: selectedCarType) { oldCarType, newCarType in
+                            if let newCarType = newCarType {
+                                carGame.type = newCarType // Update carGame type based on selection
+                            }
+                        }
             .onAppear {
                 loadScene()
             }
@@ -49,14 +53,27 @@ struct GameScene: View {
 //            cameraNode.eulerAngles = SCNVector3(x: -Float.pi / 6, y: 0, z: 0) // Example rotation (pitch)
         
         // Retrieve car and garage nodes
-        let car = scene.rootNode.childNode(withName: "car_type2", recursively: true)!
-        
+        let sedan = scene.rootNode.childNode(withName: CarType.sedan.rawValue, recursively: true)!
+        let cooper = scene.rootNode.childNode(withName: CarType.cooper.rawValue, recursively: true)!
         
         if carGame.carNumber == "" {
-            car.opacity = 0
-        }else{
-            car.opacity = 1
+            sedan.opacity = 0
+            cooper.opacity = 0
+        } else {
+            switch carGame.type {
+                case .sedan:
+                    sedan.opacity = 1
+                    cooper.opacity = 0
+                case .cooper:
+                    sedan.opacity = 0
+                    cooper.opacity = 1
+                case .supercar:
+                    // Handle supercar opacity or any other cases if needed
+                    sedan.opacity = 0
+                    cooper.opacity = 0
+                }
         }
+
         
 //        let ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
         garageViewNode = scene.rootNode.childNode(withName: "garageView", recursively: true)
@@ -81,9 +98,13 @@ struct GameScene: View {
         lastHeightRatio = Float(translation.y.truncatingRemainder(dividingBy: CGFloat(Float(UIScreen.main.bounds.height))))
     }
 
-    func handleTap() {
-        // Similar logic to original code to handle tap on a node
-    }
+//    func updateCarColor() {
+//            let colorMaterial = SCNMaterial()
+//            colorMaterial.diffuse.contents = UIColor(cgColor: selectedColor)
+//
+//            sedanNode?.geometry?.materials = [colorMaterial]
+//            cooperNode?.geometry?.materials = [colorMaterial]
+//        }
 }
 //
 //struct GameScene_Previews: PreviewProvider {

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var car: Car = Car(type: CarType.sedan, carNumber: "", name: "", attribute: CarAttribute(velg: "abc"), speedBase: 10, finalSpeed: 100)
+    @State var car: Car = Car(id: 2, type: CarType.cooper, carNumber: "", name: "", attribute: CarAttribute(velg: "abc"), speedBase: 10, finalSpeed: 100)
     
     @State private var scale = 1.01
 //    @State var userInput = ""
@@ -41,19 +41,20 @@ struct ContentView: View {
                         .navigationBarBackButtonHidden(true)
                         .navigationBarItems(trailing:
                                                 ColorPicker("Select Color", selection: $carSelectedColor)
+                        .toolbarBackground(.black, for: .navigationBar)
                                             
                         )
                         .navigationBarItems(leading:
                                                 licenseView(scale: (.constant(0.2)), car:$car, isEditable: (.constant(false)))
-                            .frame(width: 60, height: 35)
-                                            
+                        .frame(width: 60, height: 35)
                         )
                         .navigationTitle("Garage")
                         .navigationBarTitleDisplayMode(.inline)
                         .labelsHidden()
+//                        .toolbarBackground(.black, for: .navigationBar)
                 } label: {
                     Text("Start")
-                        .foregroundStyle(.blue)
+//                        .foregroundStyle(.red)
                         .bold()
                         .font(.title2)
                         .frame(maxWidth: .infinity, maxHeight: 56)
@@ -68,9 +69,8 @@ struct ContentView: View {
                 .padding(.bottom, 40)
             }
             .background(
-                GameScene(carGame: $car).scaledToFill()
-                    .frame(maxWidth: 400)
-                    .blur(radius: 5)
+                GameScene(carGame: $car, selectedColor: $carSelectedColor).scaledToFill()
+
             )
             .padding(.top, 40)
             .ignoresSafeArea()
