@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		048E5A712BE21ACB00C4FCCC /* RaceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E5A702BE21ACA00C4FCCC /* RaceScene.swift */; };
+		048E5A732BE2BE4A00C4FCCC /* homeScreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 048E5A722BE2BE4A00C4FCCC /* homeScreen.mp4 */; };
+		048E5A752BE2BE7000C4FCCC /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E5A742BE2BE7000C4FCCC /* HomeScreenView.swift */; };
+		048E5A772BE2D52D00C4FCCC /* background_music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048E5A762BE2D52D00C4FCCC /* background_music1.mp3 */; };
 		0EB8D1C52BDFAFF80055C78A /* RaceWithMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8D1C42BDFAFF80055C78A /* RaceWithMeApp.swift */; };
 		0EB8D1C72BDFAFF80055C78A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8D1C62BDFAFF80055C78A /* ContentView.swift */; };
 		0EB8D1C92BDFAFF90055C78A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB8D1C82BDFAFF90055C78A /* Assets.xcassets */; };
@@ -29,6 +32,9 @@
 
 /* Begin PBXFileReference section */
 		048E5A702BE21ACA00C4FCCC /* RaceScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceScene.swift; sourceTree = "<group>"; };
+		048E5A722BE2BE4A00C4FCCC /* homeScreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = homeScreen.mp4; sourceTree = "<group>"; };
+		048E5A742BE2BE7000C4FCCC /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		048E5A762BE2D52D00C4FCCC /* background_music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background_music1.mp3; sourceTree = "<group>"; };
 		0EB8D1C12BDFAFF80055C78A /* RaceWithMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaceWithMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB8D1C42BDFAFF80055C78A /* RaceWithMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceWithMeApp.swift; sourceTree = "<group>"; };
 		0EB8D1C62BDFAFF80055C78A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +85,8 @@
 		0EB8D1C32BDFAFF80055C78A /* RaceWithMe */ = {
 			isa = PBXGroup;
 			children = (
+				048E5A762BE2D52D00C4FCCC /* background_music1.mp3 */,
+				048E5A722BE2BE4A00C4FCCC /* homeScreen.mp4 */,
 				0EB8D1E12BDFB35E0055C78A /* art.scnassets */,
 				0EB8D1D52BDFB07C0055C78A /* .gitignore */,
 				0EB8D1DA2BDFB1130055C78A /* Model */,
@@ -90,6 +98,7 @@
 				35F1031A2BE0DB0000B51B18 /* RaceView.swift */,
 				35F1031C2BE0DB0000B51B18 /* RaceViewVersion2.swift */,
 				0EB8D1C62BDFAFF80055C78A /* ContentView.swift */,
+				048E5A742BE2BE7000C4FCCC /* HomeScreenView.swift */,
 				0EB8D1D72BDFB0F00055C78A /* View */,
 				0EB8D1C82BDFAFF90055C78A /* Assets.xcassets */,
 				0EB8D1CA2BDFAFF90055C78A /* Preview Content */,
@@ -201,7 +210,9 @@
 			files = (
 				0EB8D1CC2BDFAFF90055C78A /* Preview Assets.xcassets in Resources */,
 				0EB8D1E22BDFB35E0055C78A /* art.scnassets in Resources */,
+				048E5A732BE2BE4A00C4FCCC /* homeScreen.mp4 in Resources */,
 				0EB8D1D62BDFB07C0055C78A /* .gitignore in Resources */,
+				048E5A772BE2D52D00C4FCCC /* background_music1.mp3 in Resources */,
 				0EB8D1C92BDFAFF90055C78A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +227,7 @@
 				35F1031E2BE0DB0100B51B18 /* CardView.swift in Sources */,
 				35F103202BE0DB0100B51B18 /* GarageView.swift in Sources */,
 				0EB8D1E02BDFB3200055C78A /* GameScene.swift in Sources */,
+				048E5A752BE2BE7000C4FCCC /* HomeScreenView.swift in Sources */,
 				0EB8D1C72BDFAFF80055C78A /* ContentView.swift in Sources */,
 				0EB8D1E42BDFB98F0055C78A /* AtributteControl.swift in Sources */,
 				35F103222BE0DB0100B51B18 /* LicenseView.swift in Sources */,
