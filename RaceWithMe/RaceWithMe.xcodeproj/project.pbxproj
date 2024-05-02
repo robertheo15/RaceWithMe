@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		048E5A712BE21ACB00C4FCCC /* RaceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E5A702BE21ACA00C4FCCC /* RaceScene.swift */; };
-		048E5A732BE2BE4A00C4FCCC /* homeScreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 048E5A722BE2BE4A00C4FCCC /* homeScreen.mp4 */; };
 		048E5A752BE2BE7000C4FCCC /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E5A742BE2BE7000C4FCCC /* HomeScreenView.swift */; };
 		048E5A772BE2D52D00C4FCCC /* background_music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048E5A762BE2D52D00C4FCCC /* background_music1.mp3 */; };
 		048E5A792BE2D99900C4FCCC /* sound_car_engine1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048E5A782BE2D99900C4FCCC /* sound_car_engine1.mp3 */; };
 		048E5A7E2BE2DDFC00C4FCCC /* sound_button_click1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048E5A7C2BE2DDFC00C4FCCC /* sound_button_click1.mp3 */; };
 		048E5A7F2BE2DDFC00C4FCCC /* sound_button_click2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 048E5A7D2BE2DDFC00C4FCCC /* sound_button_click2.mp3 */; };
+		048E5A832BE3844B00C4FCCC /* homeScreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 048E5A822BE3844B00C4FCCC /* homeScreen.mp4 */; };
 		0EB8D1C52BDFAFF80055C78A /* RaceWithMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8D1C42BDFAFF80055C78A /* RaceWithMeApp.swift */; };
 		0EB8D1C72BDFAFF80055C78A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8D1C62BDFAFF80055C78A /* ContentView.swift */; };
 		0EB8D1C92BDFAFF90055C78A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB8D1C82BDFAFF90055C78A /* Assets.xcassets */; };
@@ -35,12 +35,12 @@
 
 /* Begin PBXFileReference section */
 		048E5A702BE21ACA00C4FCCC /* RaceScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceScene.swift; sourceTree = "<group>"; };
-		048E5A722BE2BE4A00C4FCCC /* homeScreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = homeScreen.mp4; sourceTree = "<group>"; };
 		048E5A742BE2BE7000C4FCCC /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		048E5A762BE2D52D00C4FCCC /* background_music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background_music1.mp3; sourceTree = "<group>"; };
 		048E5A782BE2D99900C4FCCC /* sound_car_engine1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_car_engine1.mp3; sourceTree = "<group>"; };
 		048E5A7C2BE2DDFC00C4FCCC /* sound_button_click1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_button_click1.mp3; sourceTree = "<group>"; };
 		048E5A7D2BE2DDFC00C4FCCC /* sound_button_click2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_button_click2.mp3; sourceTree = "<group>"; };
+		048E5A822BE3844B00C4FCCC /* homeScreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = homeScreen.mp4; sourceTree = "<group>"; };
 		0EB8D1C12BDFAFF80055C78A /* RaceWithMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaceWithMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB8D1C42BDFAFF80055C78A /* RaceWithMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceWithMeApp.swift; sourceTree = "<group>"; };
 		0EB8D1C62BDFAFF80055C78A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,7 +54,6 @@
 		0EB8D1E32BDFB98F0055C78A /* AtributteControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtributteControl.swift; sourceTree = "<group>"; };
 		0EB8D1E52BDFBAF30055C78A /* CardAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAttribute.swift; sourceTree = "<group>"; };
 		354FE91F2BE294D300FA4744 /* CustomRaceSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRaceSceneView.swift; sourceTree = "<group>"; };
-		354FE9232BE2B65C00FA4744 /* miiMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = miiMusic.mp3; sourceTree = "<group>"; };
 		35F103192BE0DB0000B51B18 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		35F1031A2BE0DB0000B51B18 /* RaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceView.swift; sourceTree = "<group>"; };
 		35F1031B2BE0DB0000B51B18 /* GarageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GarageView.swift; sourceTree = "<group>"; };
@@ -96,8 +95,7 @@
 				048E5A7D2BE2DDFC00C4FCCC /* sound_button_click2.mp3 */,
 				048E5A782BE2D99900C4FCCC /* sound_car_engine1.mp3 */,
 				048E5A762BE2D52D00C4FCCC /* background_music1.mp3 */,
-				048E5A722BE2BE4A00C4FCCC /* homeScreen.mp4 */,
-				354FE9232BE2B65C00FA4744 /* miiMusic.mp3 */,
+				048E5A822BE3844B00C4FCCC /* homeScreen.mp4 */,
 				0EB8D1E12BDFB35E0055C78A /* art.scnassets */,
 				0EB8D1D52BDFB07C0055C78A /* .gitignore */,
 				0EB8D1DA2BDFB1130055C78A /* Model */,
@@ -222,8 +220,8 @@
 				048E5A7F2BE2DDFC00C4FCCC /* sound_button_click2.mp3 in Resources */,
 				0EB8D1CC2BDFAFF90055C78A /* Preview Assets.xcassets in Resources */,
 				048E5A792BE2D99900C4FCCC /* sound_car_engine1.mp3 in Resources */,
+				048E5A832BE3844B00C4FCCC /* homeScreen.mp4 in Resources */,
 				0EB8D1E22BDFB35E0055C78A /* art.scnassets in Resources */,
-				048E5A732BE2BE4A00C4FCCC /* homeScreen.mp4 in Resources */,
 				0EB8D1D62BDFB07C0055C78A /* .gitignore in Resources */,
 				048E5A772BE2D52D00C4FCCC /* background_music1.mp3 in Resources */,
 				0EB8D1C92BDFAFF90055C78A /* Assets.xcassets in Resources */,

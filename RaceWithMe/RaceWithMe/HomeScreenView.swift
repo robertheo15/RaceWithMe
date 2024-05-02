@@ -69,13 +69,13 @@ struct HomeScreenView: View {
                                 .frame(maxWidth: 250, maxHeight: 56)
                         }
                         .background(
-                            RoundedRectangle(cornerRadius: 7)
+                            RoundedRectangle(cornerRadius: 30)
                                 .fill(.white)
                                 .opacity(0.9)
                                 .padding(.horizontal)
                         ).padding(.bottom, 120)
                             .simultaneousGesture(TapGesture().onEnded {
-                                clickSound.volume = 2
+                                clickSound.volume = 4
                                 clickSound.play() // <-- for testing
                                             // SoundManager.instance.playSound(sound: .impact)
                                         })

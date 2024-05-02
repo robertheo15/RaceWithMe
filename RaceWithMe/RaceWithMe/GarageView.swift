@@ -27,7 +27,7 @@ struct GarageView: View {
             Spacer()
                 .border(Color.black)
             GameScene(carGame: $carGame)
-                .scaledToFit()
+                .scaledToFill()
                 .frame(maxWidth: 400)
                 .padding(.bottom, -10)
             Spacer()
@@ -38,7 +38,7 @@ struct GarageView: View {
                     Picker("Choose picker selection", selection: $selectedSide) {
                         Text("License").tag(0)
                         Text("Body").tag(1)
-                        Text("Velg").tag(2)
+//                        Text("Velg").tag(2)
                     }
                     .padding()
                     .pickerStyle(SegmentedPickerStyle())
@@ -62,8 +62,8 @@ struct GarageView: View {
                         }
                         .padding(.horizontal)
                         .padding(.bottom)
-                    case 2:
-                        EmptyView()
+//                    case 2:
+//                        EmptyView()
                     default:
                         EmptyView()
                     }
@@ -91,7 +91,7 @@ struct GarageView: View {
                     )
                     .padding(.bottom, 40)
                     .simultaneousGesture(TapGesture().onEnded {
-                        clickSound.volume = 2
+                        clickSound.volume = 4
                         clickSound.play()
                                 })
                 }

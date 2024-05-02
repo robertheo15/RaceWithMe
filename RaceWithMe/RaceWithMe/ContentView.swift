@@ -69,7 +69,7 @@ struct ContentView: View {
                 
                 .padding(.bottom, 40)
                 .simultaneousGesture(TapGesture().onEnded {
-                    clickSound.volume = 2
+                    clickSound.volume = 4
                     clickSound.play()
                             })
             }
