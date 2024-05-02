@@ -7,12 +7,17 @@
 
 import SwiftUI
 import AVFoundation
+import SceneKit
 
 struct GarageView: View {
     @Binding var carGame: Car
     @Environment(\.presentationMode) var presentationMode2
     @State private var selectedSide = 1
     let assets = Car.getAssetsData()
+    @State var raceSceneCooper: SCNScene? = SCNScene(named: "art.scnassets/race.scn")
+    @State var raceSceneSedan: SCNScene? = SCNScene(named: "art.scnassets/raceSedanWin.scn")
+    var win: Bool = false
+    
     
     let clickSound = AVPlayer(url:  Bundle.main.url(forResource: "sound_button_click2", withExtension: "mp3")!)
     
@@ -65,8 +70,14 @@ struct GarageView: View {
                     Spacer()
                     
                     NavigationLink {
-                        RaceViewVersion2(carGame: $carGame)
-                            .navigationBarBackButtonHidden(true)
+                        
+                        if carGame.type == .sedan {
+                            RaceViewVersion2(raceScene: $raceSceneSedan, carGame: $carGame, win: .constant(true))
+                                .navigationBarBackButtonHidden(true)
+                        } else {
+                            RaceViewVersion2(raceScene: $raceSceneCooper, carGame: $carGame, win: .constant(false))
+                                .navigationBarBackButtonHidden(true)
+                        }
                     } label: {
                         Text("Race")
                             .bold()
